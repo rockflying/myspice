@@ -16,3 +16,15 @@
 
 #include <pthread.h>
 #include <sys/select.h>
+
+static int do_spice_init()
+{
+	return 0;
+}
+
+int spice_server_init()
+{
+	int ret;
+	ret = do_spice_init();
+	return ret;
+}
