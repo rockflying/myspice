@@ -13,3 +13,21 @@
 /* See the License for the specific language governing permissions and      */
 /* limitations under the License.                                           */
 /* ------------------------------------------------------------------------ */
+
+#include <stdarg.h>
+#include <stdio.h>
+
+#define STRINGIFY(x) STRINGIFY_ARG (x)
+#define STRINGIFY_ARG(x) #x
+
+#define STRLOC  (__FILE__ ":" STRINGIFY (__LINE__))
+
+typedef enum {
+	LOG_LEVEL_ERROR,
+	LOG_LEVEL_CRITICAL,
+	LOG_LEVEL_WARNING,
+	LOG_LEVEL_INFO,
+	LOG_LEVEL_DEBUG,
+} LogLevel;
+
+
